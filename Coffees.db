@@ -1,0 +1,8 @@
+CREATE TABLE coffee_counts (
+    coffee VARCHAR(50) PRIMARY KEY,
+    count INT NOT NULL DEFAULT 0
+);
+
+INSERT INTO coffee_counts (coffee) VALUES
+('Latte'), ('Espresso'), ('Cappuccino'),
+('Mocha'), ('Americano'), ('Flat White');
