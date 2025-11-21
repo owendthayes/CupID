@@ -11,7 +11,7 @@ import javax.swing.JFrame;
 
 public class Client {
     private Socket socket;
-    private DataOutputStream out;
+    private static DataOutputStream out;
     private String in;
     
     public Client() {
@@ -42,7 +42,7 @@ public class Client {
         //in.close();
     }
 
-    public void main(String[] args) {
+    public static void main(String[] args) {
         JFrame frame = new JFrame("Coffee Selector");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(300, 400);
@@ -58,7 +58,7 @@ public class Client {
         frame.setVisible(true);
     }
 
-    public void sendCoffee(String coffeeName)
+    public static void sendCoffee(String coffeeName)
     {
         try {
             out.writeUTF(coffeeName);
